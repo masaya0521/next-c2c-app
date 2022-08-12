@@ -1,29 +1,28 @@
-/* eslint-disable prettier/prettier */
-import styled from 'styled-components'
-import type { Responsive } from 'types/styles'
-import { toPropValue, Color, Space } from 'utils/styles'
+import styled from 'styled-components';
+import type { Responsive } from 'types/styles';
+import { toPropValue, Color, Space } from 'utils/styles';
 
 export type BoxProps = {
-  color?: Responsive<Color>
-  backgroundColor?: Responsive<Color>
-  width?: Responsive<string>
-  height?: Responsive<string>
-  minWidth?: Responsive<string>
-  minHeight?: Responsive<string>
-  display?: Responsive<string>
-  border?: Responsive<string>
-  overflow?: Responsive<string>
-  margin?: Responsive<Space>
-  marginTop?: Responsive<Space>
-  marginRight?: Responsive<Space>
-  marginBottom?: Responsive<Space>
-  marginLeft?: Responsive<Space>
-  padding?: Responsive<Space>
-  paddingTop?: Responsive<Space>
-  paddingRight?: Responsive<Space>
-  paddingBottom?: Responsive<Space>
-  paddingLeft?: Responsive<Space>
-}
+  color?: Responsive<Color>;
+  backgroundColor?: Responsive<Color>;
+  width?: Responsive<string>;
+  height?: Responsive<string>;
+  minWidth?: Responsive<string>;
+  minHeight?: Responsive<string>;
+  display?: Responsive<string>;
+  border?: Responsive<string>;
+  overflow?: Responsive<string>;
+  margin?: Responsive<Space>;
+  marginTop?: Responsive<Space>;
+  marginRight?: Responsive<Space>;
+  marginBottom?: Responsive<Space>;
+  marginLeft?: Responsive<Space>;
+  padding?: Responsive<Space>;
+  paddingTop?: Responsive<Space>;
+  paddingRight?: Responsive<Space>;
+  paddingBottom?: Responsive<Space>;
+  paddingLeft?: Responsive<Space>;
+};
 
 /**
  * Boxコンポーネント
@@ -31,7 +30,8 @@ export type BoxProps = {
  */
 const Box = styled.div<BoxProps>`
   ${(props) => toPropValue('color', props.color, props.theme)}
-  ${(props) => toPropValue('background-color', props.backgroundColor, props.theme)}
+  ${(props) =>
+    toPropValue('background-color', props.backgroundColor, props.theme)}
   ${(props) => toPropValue('width', props.width, props.theme)}
   ${(props) => toPropValue('height', props.height, props.theme)}
   ${(props) => toPropValue('min-width', props.minWidth, props.theme)}
@@ -49,6 +49,6 @@ const Box = styled.div<BoxProps>`
   ${(props) => toPropValue('padding-left', props.paddingLeft, props.theme)}
   ${(props) => toPropValue('padding-bottom', props.paddingBottom, props.theme)}
   ${(props) => toPropValue('padding-right', props.paddingRight, props.theme)}
-`
+`;
 
-export default Box
+export default Box;
